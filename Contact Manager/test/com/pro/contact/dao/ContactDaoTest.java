@@ -37,7 +37,7 @@ class ContactDaoTest {
 	@Test
 	public void testUpdate() {
 
-		Contact c = new Contact(18,"Anuja", "anuja@gmail.com", "pune", "9685417523");
+		Contact c = new Contact(5,"Anuja", "anuja@gmail.com", "pune", "9685417523");
 		int result = dao.update(c);
 		assertTrue(result > 0);
 
@@ -58,7 +58,7 @@ class ContactDaoTest {
 	@Test
 	public void testDelete() {
 
-		Integer id = 10;
+		Integer id = 20;
 		int result = dao.delete(id);
 		assertTrue(result>0);
 	}
@@ -68,6 +68,12 @@ class ContactDaoTest {
 		
 		
 		List<Contact> listContacts=dao.list();
+		
+		for(Contact c:listContacts)
+		{
+			System.out.println(c);
+		}
+		
 		assertTrue(!listContacts.isEmpty());
 	}
 
