@@ -37,7 +37,7 @@ public class SpringMvcConfig {
 		InternalResourceViewResolver vw=new InternalResourceViewResolver();
 		vw.setPrefix("/WEB-INF/views/");
 		vw.setSuffix(".jsp");
-		return null;
+		return vw;
 		
 	}
 	
